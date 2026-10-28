@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html data-page-node-id="zt4iZyD4WIg52RFvjVcnt2" lang="zh-CN"><head data-page-node-id="MyLr3EHWxo47QKiYbD8s5i">
+<meta data-page-node-id="6G3EnywN2CXdHlBpCr2d6n" charset="UTF-8">
+<meta data-page-node-id="7aoBs7yLpw0M4HAoSHWWxq" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="0RCaXW0OQoxXl1VRKmyoF1" data-pnid-children="wfaPdmwwuoyFlYuOG3E22M">罗骜 · 商业策略 / 品牌管理</title>
+<link data-page-node-id="3Vt43gaqYj6jOauCpko7oz" href="https://cdn.jsdelivr.net" rel="preconnect">
+<link data-page-node-id="2So4yWFEnbSiCNCqmxdYpj" crossorigin href="https://cdn.jsdelivr.net" rel="preconnect">
+<link data-page-node-id="QUeCvEZPrCIaoEUuFcUTdJ" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.5/400.css" rel="stylesheet">
+<link data-page-node-id="lnOBANIZfvPUmShEjG9KsV" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.5/500.css" rel="stylesheet">
+<link data-page-node-id="c1WZpUfSN2ml4CIu6mskwH" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.5/600.css" rel="stylesheet">
+<link data-page-node-id="zdixyezutogauJypy0eZho" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5.2.5/400.css" rel="stylesheet">
+<link data-page-node-id="GBjeynKmyidyb5gWE75gCb" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5.2.5/500.css" rel="stylesheet">
+<link data-page-node-id="gtyGMEMwSL51WAZsuYJCyN" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5.2.5/600.css" rel="stylesheet">
+<style data-page-node-id="EdjuWF0OkyUEOjIRCCD9ff" data-pnid-children="LTK6cvqWKtc79rUxwMF4aX">
+  /* ==========================================================
+     罗骜 · 个人网站
+     视觉方向：浅色基底（Apple 式克制）+ 编辑式版面（大留白、细分割线、层级靠字号与灰度）
+     排版原则：一套无衬线、五级字阶、全部间距走 8 的倍数、分割线统一 0.5px 视觉重量
+     ========================================================== */
+  :root{
+    --bg:#FBFAF7;
+    --bg-soft:#F3F0E9;
+    --bg-mute:#F8F6F1;
+    --ink:#141210;
+    --ink-2:#302C27;
+    --ink-3:#5A554C;
+    --ink-4:#8A8477;
+    --line:rgba(26,20,12,.09);
+    --line-2:rgba(26,20,12,.17);
+    --accent:#2E4A68;
+
+    --r-xl:14px;
+    --r-lg:14px;
+    --r-md:14px;
+    --r-im:4px;
+
+    --max:1240px;
+    --gut:44px;
+    /* 动效词汇表：三条曲线 + 四档时长 */
+    --ease:var(--e-out);                      /* 旧名保留，指向进入曲线 */
+    --e-out:cubic-bezier(.16,.84,.44,1);      /* 进入：快起慢收 */
+    --e-in:cubic-bezier(.55,.06,.68,.19);     /* 退出：慢起快收 */
+    --e-io:cubic-bezier(.65,0,.35,1);         /* 对称：换位、展开 */
+    --d-1:140ms;                              /* 即时反馈 */
+    --d-2:240ms;                              /* 微交互位移 */
+    --d-3:420ms;                              /* 状态切换、遮罩 */
+    --d-4:760ms;                              /* 入场编排 */
+
+    --sans:"Inter","Noto Sans SC","PingFang SC",-apple-system,BlinkMacSystemFont,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
+  body{
+    font-family:var(--sans);
+    font-size:16px;line-height:1.78;letter-spacing:.002em;
+    color:var(--ink);background:var(--bg);
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  ::selection{background:rgba(20,18,16,.88);color:var(--bg)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+
+  /* ---------- 导航：常驻磨砂白，滚动后浮出一条发丝线 ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(251,250,247,.72);
+    -webkit-backdrop-filter:saturate(180%) blur(20px);
+    backdrop-filter:saturate(180%) blur(20px);
+    border-bottom:1px solid transparent;
+    transition:background var(--d-3) var(--e-io),border-color var(--d-3) var(--e-io);
+  }
+  .nav.scrolled{background:rgba(251,250,247,.86);border-bottom-color:var(--line)}
+  .nav-in{
+    max-width:var(--max);margin:0 auto;padding:0 var(--gut);height:64px;
+    display:flex;align-items:center;gap:40px;
+  }
+  .nav-brand{
+    display:none;align-items:baseline;gap:10px;
+    font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--ink);
+    order:1;white-space:nowrap;
+  }
+  .nav-brand span{
+    font-size:10.5px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-4);
+  }
+  .nav-links{
+    order:2;margin:0 auto;display:flex;gap:36px;
+    font-size:13.5px;letter-spacing:.02em;color:var(--ink-3);
+  }
+  .nav-links a{position:relative;padding:8px 0;transition:color var(--d-2) var(--e-out)}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;
+    background:var(--ink);transform:scaleX(0);transform-origin:right center;
+    transition:transform var(--d-3) var(--e-out);
+  }
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a:hover::after{transform:scaleX(1);transform-origin:left center}
+  .nav-cta{
+    order:3;font-size:13px;letter-spacing:.02em;color:var(--ink);white-space:nowrap;
+    padding-bottom:3px;border-bottom:1px solid var(--line-2);
+    transition:border-bottom-color var(--d-2) var(--e-out),color var(--d-2) var(--e-out);
+  }
+  .nav-cta:hover{border-bottom-color:var(--ink);color:var(--ink)}
+
+  /* ---------- 首屏：纯排版的版面，空间本身就是主角 ---------- */
+  .hero{position:relative}
+  .hero-in{
+    max-width:var(--max);margin:0 auto;padding:64px var(--gut) 0;
+    min-height:100svh;display:flex;flex-direction:column;
+  }
+  .hero-meta{
+    display:flex;justify-content:space-between;align-items:baseline;gap:28px;
+    padding-top:26px;
+    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4);
+  }
+  .ident{display:flex;align-items:center;gap:14px}
+  .ident .nm{
+    font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:none;color:var(--ink);
+    display:flex;align-items:baseline;
+  }
+  .ident .nm em{
+    font-style:normal;font-size:11px;font-weight:400;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ink-4);margin-left:12px;
+  }
+  .ident .rule{flex:0 0 24px;height:1px;background:var(--line-2)}
+  .ident .city{font-size:11.5px;letter-spacing:.16em;color:var(--ink-4)}
+
+  .hero-keys{display:flex;align-items:center;font-size:11.5px;letter-spacing:.22em;color:var(--ink-4)}
+  .hero-keys span+span{border-left:1px solid var(--line-2);margin-left:16px;padding-left:16px}
+
+  .hero-body{
+    margin:auto 0 0;padding:clamp(40px,8vh,96px) 0 clamp(56px,9vh,104px);
+  }
+  .slogan{
+    font-size:clamp(40px,7.1vw,104px);
+    font-weight:500;line-height:1.15;letter-spacing:0;
+    text-wrap:balance;
+  }
+  .slogan .s1{color:var(--ink-4)}
+  .slogan .s2{color:var(--ink)}
+  .hero-sub{max-width:640px;margin-top:clamp(30px,4vw,44px)}
+  .hero-intro{
+    font-size:16px;line-height:1.9;letter-spacing:.004em;color:var(--ink-3);
+    white-space:pre-wrap;
+  }
+
+  .hero-foot{
+    display:flex;justify-content:space-between;align-items:center;gap:24px;
+    border-top:1px solid var(--line);padding:18px 0 22px;
+  }
+  .hero-cap{
+    font-size:11.5px;letter-spacing:.16em;color:var(--ink-4);white-space:nowrap;
+    overflow:hidden;text-overflow:ellipsis;
+  }
+  .glyph{display:grid;grid-template-columns:repeat(2,6px);gap:4px;flex:0 0 auto}
+  .glyph i{width:6px;height:6px;background:var(--ink-4)}
+  .glyph i:nth-child(2),.glyph i:nth-child(3){background:transparent;box-shadow:inset 0 0 0 1px var(--ink-4)}
+
+  /* 首屏入场：三种动作（揭示 / 上浮 / 画线）分五段，fill-mode 一律 backwards */
+  @keyframes rvClip{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 -2% 0)}}
+  @keyframes rvRise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes rvLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  .hero-meta{animation:rvClip 620ms var(--e-out) backwards}
+  .slogan .s1{display:inline-block;animation:rvClip 900ms var(--e-out) 100ms backwards}
+  .slogan .s2{display:inline-block;animation:rvClip 900ms var(--e-out) 220ms backwards}
+  .hero-intro{animation:rvRise 700ms var(--e-out) 520ms backwards}
+  .hero-foot{animation:rvRise 700ms var(--e-out) 680ms backwards}
+  .ident .rule{transform-origin:left center;animation:rvLine 900ms var(--e-out) 820ms backwards}
+
+  /* ---------- 数据带：只用两条发丝线夹住，不加底色 ---------- */
+  .proof{padding:0}
+  .stats{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line-2);border-bottom:1px solid var(--line);
+  }
+  .stat{padding:52px 40px 44px 0;border-right:0}
+  .stat:last-child{border-right:0;padding-right:0}
+  .stat .n{
+    font-size:clamp(32px,3.4vw,48px);font-weight:500;line-height:1;
+    letter-spacing:-.03em;color:var(--ink);
+    font-variant-numeric:tabular-nums;
+  }
+  .stat .n sup{
+    font-size:.34em;font-weight:500;letter-spacing:.02em;color:var(--ink-3);
+    vertical-align:top;position:relative;top:.22em;margin-left:.08em;
+  }
+  .stat .l{margin-top:18px;font-size:12.5px;line-height:1.72;letter-spacing:.02em;color:var(--ink-3)}
+
+  /* ---------- 项目墙：细线网格 ---------- */
+  .wall{margin-top:clamp(88px,11vw,132px)}
+  .wall-h{
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-4);
+    margin-bottom:20px;
+  }
+  .wall-h .sec-no{margin-right:14px;font-weight:500}
+  .wall-g{
+    display:grid;grid-template-columns:1fr;gap:0;
+    background:transparent;border:0;
+    border-radius:0;overflow:visible;
+  }
+  .wall-row{
+    position:relative;
+    background:var(--bg);
+    display:flex;align-items:center;justify-content:space-between;
+    gap:34px;padding:23px 30px 23px 20px;
+    border-bottom:1px solid var(--line);
+    transition:background var(--d-1) var(--e-out);
+  }
+  .wall-row::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+    background:var(--accent);transform:scaleY(0);transform-origin:center top;
+    transition:transform var(--d-3) var(--e-out);
+  }
+  .wall-row:hover{background:var(--bg-mute)}
+  .wall-row:hover::before{transform:scaleY(1)}
+  .wall-row:last-child{border-bottom:0}
+  .wall-row--end{min-height:128px}
+  .wall-row--trio{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:start;align-content:center;
+    gap:0;min-height:253px;padding:26px 30px 26px 20px;
+  }
+  .wall-seg{min-width:0;padding:0 clamp(16px,1.8vw,26px)}
+  .wall-seg:first-child{padding-left:0}
+  .wall-seg:last-child{padding-right:0}
+  .wall-seg+.wall-seg{border-left:0}
+  .wall-seg .wall-desc{max-width:none}
+  .wall-info{
+    font-size:15.5px;font-weight:500;letter-spacing:0;line-height:1.45;
+    min-width:0;
+    transition:transform var(--d-2) var(--e-out);
+  }
+  .wall-row:hover .wall-info{transform:translateX(6px)}
+  .wall-info span{display:block;margin-top:7px;font-size:12px;font-weight:400;letter-spacing:.01em;color:var(--ink-4)}
+  .wall-info .wall-role{
+    display:inline;margin-left:9px;padding-left:9px;
+    border-left:1px solid rgba(26,20,12,.14);
+    font-size:11px;font-style:normal;font-weight:400;letter-spacing:.05em;color:var(--ink-4);
+    white-space:nowrap;
+  }
+  .wall-desc{
+    margin-top:10px;max-width:460px;
+    font-size:13px;line-height:1.7;font-weight:400;letter-spacing:0;color:var(--ink-3);
+  }
+  .wall-thumb{
+    flex:0 0 276px;width:276px;height:207px;
+    border-radius:var(--r-im);object-fit:cover;background:var(--bg-soft);
+    outline:0;
+    transition:filter var(--d-2) var(--e-out);
+  }
+  .wall-row:hover .wall-thumb{filter:saturate(1.08) contrast(1.02)}
+
+  /* ---------- 区块通用 ---------- */
+  section.block{padding:clamp(88px,11vw,132px) 0 0}
+  .sec-head{
+    display:grid;grid-template-columns:1fr auto;grid-template-areas:"no en" "title title";
+    gap:0 24px;padding-top:19px;position:relative;
+  }
+  .sec-no{grid-area:no;font-size:11px;font-weight:500;letter-spacing:.16em;color:var(--accent)}
+  .sec-head .en{grid-area:en;justify-self:end;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-4)}
+  .sec-head h2{
+    grid-area:title;margin-top:18px;
+    font-size:clamp(30px,4.4vw,56px);font-weight:500;line-height:1.26;letter-spacing:0;
+  }
+  .sec-lead{
+    margin:22px 0 clamp(40px,5vw,64px);
+    max-width:700px;font-size:17px;line-height:1.85;letter-spacing:.004em;color:var(--ink-3);text-wrap:balance;
+  }
+
+  /* ---------- 能力：两栏，只留极细的分隔 ---------- */
+  .caps{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+  .caps .cap{padding:40px 48px 44px 0;border-bottom:1px solid var(--line)}
+  .caps .cap:nth-child(2n){padding-left:48px;padding-right:0;border-left:0}
+  .caps .cap .k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4);margin-bottom:16px}
+  .caps .cap h3{font-size:21px;font-weight:500;letter-spacing:0;margin-bottom:12px}
+  .caps .cap p{font-size:15px;line-height:1.85;letter-spacing:.004em;color:var(--ink-3)}
+  .caps .cap .ev{
+    margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:12.5px;line-height:1.8;letter-spacing:.01em;color:var(--ink-4);
+  }
+  .caps .cap .ev b{color:var(--ink-2);font-weight:600}
+
+  /* ---------- 精选项目 ---------- */
+  .proj{counter-reset:fig;border-top:1px solid var(--line-2);padding-top:clamp(28px,3vw,40px)}
+  .proj + .proj{margin-top:clamp(76px,9vw,112px)}
+  .proj-meta{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+  .proj-idx{font-size:11px;font-weight:500;letter-spacing:.16em;color:var(--accent)}
+  .proj-meta h3{font-size:clamp(26px,3.2vw,40px);font-weight:500;line-height:1.18;letter-spacing:0}
+  .proj-meta .when{
+    margin-left:auto;font-size:12.5px;letter-spacing:.04em;color:var(--ink-4);white-space:nowrap;
+  }
+  .proj-sub{margin-top:18px;max-width:760px;font-size:15px;line-height:1.8;letter-spacing:.004em;color:var(--ink-3)}
+  .disciplines{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 clamp(32px,4vw,48px)}
+  .disciplines span{
+    font-size:11.5px;letter-spacing:.06em;color:var(--ink-3);
+    border:1px solid var(--line-2);border-radius:999px;padding:6px 14px;
+    transition:border-color var(--d-2) var(--e-out),color var(--d-2) var(--e-out),background var(--d-2) var(--e-out);
+  }
+  .disciplines span:hover{border-color:var(--ink-4);color:var(--ink);background:var(--bg-soft)}
+
+  .proj-body{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:clamp(32px,4vw,48px)}
+  .proj-col{padding:38px 48px 42px 0;border-bottom:1px solid var(--line)}
+  .proj-col:nth-child(2n){padding-left:48px;padding-right:0;border-left:0}
+  .proj-col h4{
+    font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-4);margin-bottom:18px;
+  }
+  .proj-col p{font-size:15px;line-height:1.88;letter-spacing:.004em;color:var(--ink-3);margin-bottom:14px}
+  .proj-col p:last-child{margin-bottom:0}
+  .proj-col ul{list-style:none}
+  .proj-col li{
+    position:relative;padding-left:18px;margin-bottom:14px;
+    font-size:15px;line-height:1.88;letter-spacing:.004em;color:var(--ink-3);
+  }
+  .proj-col li:last-child{margin-bottom:0}
+  .proj-col li::before{content:"";position:absolute;left:0;top:.92em;width:8px;height:1px;background:var(--ink-4)}
+  .proj-col li b{color:var(--ink);font-weight:600}
+  .proj-col p.judge{font-size:17px;line-height:1.8;letter-spacing:-.002em;color:var(--ink)}
+
+  .proj-hero{width:62%;max-width:714px;margin:0}
+  .proj-hero img{
+    display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;
+    border-radius:var(--r-im);background:var(--bg-soft);
+    outline:0;
+  }
+  .proj-strip{
+    display:flex;flex-wrap:wrap;
+    gap:16px;
+    margin-top:clamp(16px,2vw,24px);
+  }
+  .shot .ph{
+    aspect-ratio:3/2;border-radius:var(--r-im);
+    border:1px dashed rgba(26,20,12,.16);background:var(--bg-mute);
+    display:flex;align-items:center;justify-content:center;
+    font-size:11.5px;letter-spacing:.16em;color:var(--ink-4);
+  }
+  .shot{position:relative;counter-increment:fig;flex:0 0 calc((100% - 32px)/3);
+    overflow:clip;border-radius:var(--r-im)}
+  .shot img{
+    width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;
+    border-radius:var(--r-im);background:var(--bg-soft);
+    outline:0;
+    transition:transform var(--d-4) var(--e-out);
+  }
+  .shot:hover img{transform:scale(1.04)}
+  .shot .cap{
+    padding:11px 0 0;font-size:11px;line-height:1.55;letter-spacing:.03em;color:var(--ink-4);
+  }
+  .shot .cap::before{
+    content:"FIG.0" counter(fig);margin-right:8px;
+    font-size:9.5px;letter-spacing:.14em;color:var(--ink-4);opacity:.78;
+  }
+
+  /* ---------- V4.03 精选项目：先图后文 · 一主一辅 · 三拍循环 ---------- */
+  /* 顺序：标题 → 一句话定义 → 图片 → 能力标签 → 四栏正文（DOM 零改动，纯 order 重排） */
+  .proj{display:flex;flex-direction:column}
+  .proj-hero{display:none}          /* 与 .proj-strip 首图同源重复，保留节点、不参与排版 */
+  .proj-meta{order:1}
+  .proj-sub{order:2}
+  .proj-strip{order:3}
+  .disciplines{order:4}
+  .proj-body{order:5}
+
+  /* flex 下外边距不再折叠，间距按新顺序逐段重建 */
+  .proj-sub{margin-top:18px;max-width:620px}
+  .proj-strip{margin-top:clamp(26px,3vw,36px)}
+  .disciplines{margin:clamp(18px,2vw,24px) 0 0}
+  .proj-body{margin-top:clamp(26px,3vw,36px)}
+  .proj + .proj{margin-top:clamp(120px,13vw,176px)}
+
+  /* 一主一辅：3:2 零裁切，主图 62% / 辅图 33%，中缝由 space-between 自然生成 */
+  .proj-strip{align-items:flex-start;justify-content:space-between}
+  .proj-strip .shot:first-child{flex:0 0 62%}
+  .proj-strip .shot:last-child{flex:0 0 33%}
+  .shot img,.shot .ph{aspect-ratio:3/2;border-radius:var(--r-im)}
+
+  /* 三拍循环：大左 → 大右 → 通栏行（3n 循环，加到 6 个案例自动延续） */
+  .proj:nth-of-type(3n+2) .proj-strip{flex-direction:row-reverse}
+  .proj:nth-of-type(3n+3) .proj-strip{flex-direction:column}
+  .proj:nth-of-type(3n+3) .proj-strip .shot:first-child{align-self:flex-start;flex:0 0 auto;width:62%}
+  .proj:nth-of-type(3n+3) .proj-strip .shot:last-child{align-self:flex-end;flex:0 0 auto;width:33%;margin-left:0}
+
+  /* 只给 03 精选项目加换气，其它区块不动 */
+  section.block#work{padding-top:clamp(140px,18vw,240px)}
+
+  /* ---------- 档案 ---------- */
+  .arch{border-top:1px solid var(--line-2)}
+  .arch-item{
+    display:grid;grid-template-columns:280px 1fr;gap:clamp(20px,4vw,56px);
+    align-items:start;padding:34px 0;border-bottom:1px solid var(--line);
+  }
+  .arch-item .nm{font-size:19px;font-weight:500;letter-spacing:0;line-height:1.45;transition:color var(--d-2) var(--e-out)}
+  .arch-item .nm span{display:block;margin-top:8px;font-size:12px;font-weight:400;letter-spacing:.03em;color:var(--ink-4)}
+  .arch-item .bd p{font-size:15px;line-height:1.88;letter-spacing:.004em;color:var(--ink-3)}
+  .arch-item .bd .rl{margin-top:12px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4)}
+
+  /* ---------- 收束语：一块浅灰的安静收尾 ---------- */
+  .closing{margin-top:clamp(88px,11vw,132px)}
+  .closing .in{
+    background:var(--bg-soft);border-radius:var(--r-xl);
+    padding:clamp(56px,7vw,104px) clamp(26px,6vw,72px);
+    text-align:center;
+  }
+  .closing .q{
+    max-width:820px;margin:0 auto;
+    font-size:clamp(24px,3.4vw,42px);font-weight:500;line-height:1.46;letter-spacing:0;
+    text-wrap:balance;color:var(--ink);
+  }
+  .closing .by{margin-top:26px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-4)}
+
+  /* ---------- 页脚 ---------- */
+  .foot{margin-top:clamp(26px,3.4vw,40px);border-top:1px solid var(--line);padding:26px 0 72px}
+  .foot .fg{
+    display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    font-size:12px;letter-spacing:.04em;color:var(--ink-4);
+  }
+  .foot .fg b{color:var(--ink-2);font-weight:500}
+
+  /* ---------- 响应式 ---------- */
+  @media(max-width:1080px){
+    :root{--gut:32px}
+    .hero-body{padding-bottom:clamp(48px,8vh,80px)}
+  }
+  @media(max-width:860px){
+    :root{--gut:22px}
+    .nav-brand{display:flex}
+    .nav-links{display:none}
+    .nav-in{justify-content:space-between}
+    .hero-in{min-height:auto;padding-top:64px}
+    .hero-meta{padding-top:22px}
+    .hero-body{margin:0;padding:clamp(48px,10vh,84px) 0 clamp(48px,8vh,72px)}
+    .slogan{font-size:clamp(33px,8.8vw,52px);letter-spacing:-.014em;line-height:1.16}
+    .hero-intro{font-size:15.5px;line-height:1.85}
+    .hero-foot{margin-top:clamp(40px,8vh,64px);padding:16px 0 20px}
+    .hero-cap{font-size:11px;letter-spacing:.1em}
+    .stats{grid-template-columns:1fr}
+    .stat{padding:26px 0;border-right:0;border-bottom:1px solid var(--line)}
+    .stat:last-child{border-bottom:0;padding-bottom:26px}
+    .stat .l{margin-top:12px}
+    .wall-row{padding:22px 20px;gap:24px}
+    .wall-thumb{flex:0 0 200px;width:200px;height:150px}
+    .wall-row--end{height:auto;min-height:112px}
+    .wall-row--trio{grid-template-columns:1fr;min-height:0;padding:0}
+    .wall-seg{padding:18px 0}
+    .wall-seg+.wall-seg{border-left:0;border-top:1px solid var(--line)}
+    .caps{grid-template-columns:1fr}
+    .caps .cap{padding:32px 0}
+    .caps .cap:nth-child(2n){padding-left:0;border-left:0}
+    .proj-meta .when{margin-left:0;width:100%}
+    .proj-body{grid-template-columns:1fr}
+    .proj-col{padding:30px 0}
+    .proj-col:nth-child(2n){padding-left:0;border-left:0}
+    .shot{flex:0 0 calc((100% - 16px)/2)}
+    /* 三拍在 ≤860 一律退回单列（同权重 + 位置靠后，压过 3n+2 / 3n+3） */
+    .proj:nth-of-type(n) .proj-strip{flex-direction:column}
+    .proj:nth-of-type(n) .proj-strip .shot,
+    .proj:nth-of-type(n) .proj-strip .shot:first-child,
+    .proj:nth-of-type(n) .proj-strip .shot:last-child{
+      flex:0 0 100%;width:100%;max-width:none;margin-left:0;align-self:stretch
+    }
+    .arch-item{grid-template-columns:1fr;gap:10px;padding:28px 0}
+    .closing .q{letter-spacing:-.008em}
+  }
+  @media(max-width:560px){
+    .wall-row{padding:16px;gap:16px}
+    .wall-thumb{flex:0 0 132px;width:132px;height:99px}
+    .wall-info .wall-role{display:block;margin:5px 0 0;padding:0;border-left:0;white-space:normal}
+    .wall-row--end{height:auto;min-height:96px}
+    .wall-row--trio{padding:0 16px}
+    .shot{flex:1 1 100%}
+    .hero-meta{flex-direction:column;align-items:flex-start;gap:12px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+  }
+
+  /* ==========================================================
+     V4.05 · 滚动进入（所有隐藏态都挂在 html.js 之下）
+     ========================================================== */
+  .sec-head::before{
+    content:"";position:absolute;left:0;right:0;top:0;height:1px;
+    background:var(--line-2);transform-origin:left center;
+  }
+  .js .sec-head::before{transform:scaleX(0);transition:transform 900ms var(--e-out) 120ms}
+  .js .sec-head.in::before{transform:scaleX(1)}
+  .js.rv-all .sec-head::before{transform:scaleX(1);transition:none}
+
+  .js .rv{
+    opacity:0;transform:translateY(14px);
+    transition:opacity var(--d-4) var(--e-out),transform var(--d-4) var(--e-out);
+  }
+  .js .rv.rv-in{opacity:1;transform:translateY(0)}
+  /* .wall-row 自带 background 过渡（V4.04 hover），补回去，避免被 .rv 的 transition 冲掉 */
+  .js .wall-g .wall-row.rv{
+    transition:opacity var(--d-4) var(--e-out),transform var(--d-4) var(--e-out),
+               background var(--d-1) var(--e-out);
+  }
+  .js.rv-all .rv{opacity:1!important;transform:none!important;transition:none!important}
+
+  /* ==========================================================
+     V4.06 · 联系方式（收束语之后、页脚之前）
+     ========================================================== */
+  .reach{
+    margin-top:clamp(56px,7vw,88px);
+    scroll-margin-top:84px;            /* 固定导航 64px + 20px 余量 */
+    border-top:1px solid var(--line-2);
+    padding-top:clamp(26px,3.2vw,38px);
+  }
+  .reach-note{
+    margin:0 0 clamp(22px,2.8vw,30px);
+    font-size:13px;line-height:1.72;letter-spacing:.02em;color:var(--ink-3);
+  }
+  .reach-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px)}
+  .reach-cell{padding-right:clamp(24px,4vw,56px);border-right:1px solid var(--line)}
+  .reach-cell:last-child{border-right:0;padding-right:0}
+  .reach-l{
+    font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-4);
+  }
+  .reach-v{
+    display:inline-block;margin-top:14px;
+    font-size:clamp(22px,2.8vw,32px);font-weight:500;line-height:1.28;letter-spacing:-.01em;
+    color:var(--ink);text-decoration:none;
+  }
+  a.reach-v{
+    padding-bottom:2px;border-bottom:1px solid var(--line-2);
+    transition:color .28s var(--ease),border-color .28s var(--ease);
+  }
+  a.reach-v:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .reach-v.wx{user-select:all;-webkit-user-select:all;cursor:text}
+  .reach-hint{
+    display:inline-block;margin-left:12px;
+    font-size:10.5px;letter-spacing:.08em;color:var(--ink-4);
+    user-select:none;-webkit-user-select:none;
+  }
+  @media(max-width:860px){
+    .reach-in{grid-template-columns:1fr;gap:0}
+    .reach-cell{border-right:0;padding-right:0;padding-bottom:22px;border-bottom:1px solid var(--line)}
+    .reach-cell:last-child{border-bottom:0;padding-top:22px;padding-bottom:0}
+  }
+  @media(max-width:560px){
+    .reach-v{font-size:20px}
+    .reach-hint{display:none}
+  }
+
+  /* ==========================================================
+     V4.07 · 首屏退场视差（阻尼见文末脚本）
+     ========================================================== */
+  .hero{overflow:clip}                 /* 首屏下移时不许压到下一区块 */
+  .hero-in{transform:translate3d(0,0,0)}   /* 提层，给 JS 一个起点 */
+</style>
+<style data-page-node-id="p4YExplt2oPUoATJNy5ThL" data-pnid-children="GrEaPzzMdSHxtWRaTTQbdZ" id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style data-page-node-id="FlsYnNE0YdACRSlU6W4ieT" data-pnid-children="EmJ5zZjUL0uw5jw8ylmhSS" id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style><script>document.documentElement.className+=' js';</script></head>
+<body data-page-node-id="Mgt338WAv2RJoHFbuhyk9D">
+
+<nav data-page-node-id="pUbj21o0QMgfXDPtQzQNOB" class="nav scrolled">
+  <div data-page-node-id="oDIr1mI7OUGG3zsBZGkvFB" class="nav-in">
+    <div data-page-node-id="kCt71cbpJCvIFyb7Lirh8y" class="nav-brand"><!--pnid:FS891lP7rMfiDYr4Fs3OIH-->罗骜<span data-page-node-id="dd7CwMTv58fREosY7GtNMS"><!--pnid:mz3Rg7pI1p9wQ82EMxpaxV-->Luo Ao</span></div>
+    <div data-page-node-id="fDbkvHJKqjYu6tYpFW0NaN" class="nav-links">
+      <a data-page-node-id="MJqUUCA6GeqCylTl4VSr2i" href="#value"><!--pnid:sKE2hnwhjiId0hUYTXj6ux-->能力</a>
+      <a data-page-node-id="MU52PdDvZpZsYES9RvaUaC" href="#projects"><!--pnid:zwMiFIy0O1pIFxmg5fFbet-->经历</a>
+      <a data-page-node-id="OiY4PumeDcFGqrus7qbY1f" href="#work"><!--pnid:dgsVlvxTIeBl5Ub1wgv5eP-->项目</a>
+      <a data-page-node-id="BcIOlcgQKM9QCCcbx0y6G0" href="#contact"><!--pnid:M2swUnxYnrA6KfIz0cJTrG-->联系</a>
+    </div>
+    <a data-page-node-id="wOj31YN7vuHFCrnWkwphDV" class="nav-cta" href="luoao-resume.pdf" download="罗骜_简历.pdf" type="application/pdf" rel="noopener"><!--pnid:g0BeF4agFCOeiifXb5rD1V-->下载简历 PDF ↓</a>
+  </div>
+</nav>
+
+  <!--pnid:W1NBvIEeoS6ZYFBBJbl5Eo--><!-- ================= 首屏 ================= -->
+  <header data-page-node-id="RrbBaSyblsknasi7yyPmyG" class="hero">
+    <div data-page-node-id="vnvH3MJeXDY6efvqYetUSU" class="hero-in">
+
+      <div data-page-node-id="8r8gA8Jq0VnvrXmJXr18Jm" class="hero-meta">
+        <div data-page-node-id="UZOLwMQSF3bbGIyd93IbZY" class="ident">
+          <span data-page-node-id="mHpOpntv2urhVNVbSq4TxK" class="nm"><!--pnid:a2olQZAAYruF0wrprCIEuc-->罗骜<em data-page-node-id="uEv9tgnSdLftYwVPYPwmv9"><!--pnid:QvWhr84Bl9LnHUcwpMwfPn-->Luo Ao</em></span>
+          <span data-page-node-id="0RUPb84715a4iyGTzznfkZ" class="rule"></span>
+          <span data-page-node-id="M3mnzAtYJpvBD9ImAfhsFU" class="city"><!--pnid:3MrqxAHhfCQLR73f7RsFju-->成都</span>
+        </div>
+        <div data-page-node-id="k3y5r0w1q2" class="hero-keys"><span data-page-node-id="k3y5r0w1q3"><!--pnid:zWhSiZcFtsFlNQ67BEKBDP-->策略</span><span data-page-node-id="k3y5r0w1q4"><!--pnid:wog1B4QLYIsbaYo3du8epa-->品牌</span><span data-page-node-id="k3y5r0w1q5"><!--pnid:RLT0zYXGEf7snPJ9J7XE8J-->落地</span></div>
+      </div>
+
+      <div data-page-node-id="ZjwuLAd41PMgfUttUMfDQ0" class="hero-body">
+        <h2 data-page-node-id="Qm74lmdfFe3qktQ3oRyka8" class="slogan"><span data-page-node-id="RuFz16TpIKZDVD1c9wHwoc" class="s1"><!--pnid:zG9PjihBfUuAXzThk2TOTj-->从市场洞察，</span><br data-page-node-id="mLrsSCThbyEIqdE22nzpbC"><span data-page-node-id="YvcnSkBEyVGx0X9nbHvZzt" class="s2"><!--pnid:5qfei0NQatOdHPEjr2399M-->到商业结果。</span></h2>
+        <div data-page-node-id="ZPTCBo02OFyORRIdSvlC05" class="hero-sub">
+          <p data-page-node-id="1ntr0d0e5s6" class="hero-intro"><!--pnid:HaZRLmDWl1WTSUAxb2SKYZ-->近20年品牌管理与市场营销经验，兼具从0到1建设、营销全案操盘与商业运营协同能力，累计操盘营销产值超30亿元，擅长以品牌策略驱动市场增长与商业转化。</p>
+        </div>
+      </div>
+
+      <div data-page-node-id="POkhlYl3aX9ARwNtwoIef8" class="hero-foot">
+        <div data-page-node-id="N4ZKUasCwyQz8f7VBP8urQ" class="hero-cap"><!--pnid:v2wPGGwoheI2Zy1dWHfVeE-->商业策略 · 品牌管理 · 营销操盘 · 项目运营</div>
+        <span data-page-node-id="tqYoFcWpZBYTaE2FpsGtNW" aria-hidden="true" class="glyph"><i data-page-node-id="6Nda2k5T5s3s8bleTgq4r2"></i><i data-page-node-id="m1W4kWjDN108EO3ZmMSDKe"></i><i data-page-node-id="HRpSv90LoVSef8AMhFlFfK"></i><i data-page-node-id="D1GmSMh7EaXfjsfJrq9qpL"></i></span>
+      </div>
+    </div>
+  </header>
+
+<div data-page-node-id="qHESdSMMsLTpuy0dMbgOu0" class="wrap">
+
+  <!--pnid:DpqcIVNNu6TYR1HG0ejHpj--><!-- 数据带 -->
+  <section data-page-node-id="cCMcU5WkWE56sGVB2U1I1g" class="proof">
+    <div data-page-node-id="5gLLKHUCi2rwIbrF5JpAt5" class="stats">
+      <div data-page-node-id="0K8pgb8Tcojl8X1DJgRSGP" class="stat"><div data-page-node-id="aVzvKxrOKHhAlVLF2ZVAUg" class="n"><!--pnid:hSjxoQI4i8rypvuLN47S9Y-->11.3<sup data-page-node-id="eO1KDR0DgVtMJCzxDnYlGS"><!--pnid:1oG860fkC7BcXXwLD2SZxc-->亿</sup></div><div data-page-node-id="3HJSwhrWdF6bepdDvAEhv2" class="l"><!--pnid:lRRIrlV6gmBdy4sL1RHbwd-->单盘最高销售产值<br data-page-node-id="57JHntpziGSbNEgdcdUaCM"><!--pnid:ApLE1Y2zu34Ok6BgzMsGbg-->上林开府 · 温江</div></div>
+      <div data-page-node-id="TghAgEXkDWphyPdpiuglb4" class="stat"><div data-page-node-id="2X2T96J5Pe0BSLMHpwdtZh" class="n"><!--pnid:erGqPrYLwqQFgmgfiOoogB-->80<sup data-page-node-id="PxZJ3YcXI1sQFiQIdmJtDG"><!--pnid:giv03sOxpXSt1qKH3P6s36-->%</sup></div><div data-page-node-id="M4tdIUxio3OQMXzdGGcDZD" class="l"><!--pnid:qczaA4R7g0aGGwzznOE3ya-->配套商业开盘去化<br data-page-node-id="zA0vuDnhSnVh7sdAl9yhWy"><!--pnid:3MLAlsW6k4mUM2CALM9PKU-->成交均价高于区域约 40%</div></div>
+      <div data-page-node-id="2fNLBRxRHaKiFNSLs5zZyM" class="stat"><div data-page-node-id="1RslYr4ExNdBWDiMisWPLI" class="n"><!--pnid:V2Fn2wYBwtKtQ5K4NiZwVz-->20<sup data-page-node-id="LR2Oil54S7pNlJRo8tDxSf"><!--pnid:fbyXnIBicpmy0mU3klkB4b-->万+</sup></div><div data-page-node-id="o22XUskUPVhuSNdUXFnFae" class="l"><!--pnid:2c4E6uRXcWmTEssdFThAzS-->单场主题活动客流<br data-page-node-id="xi7FNzUKfZslyHKjnuq27i"><!--pnid:wLWRD0unFJ6M4zWSpstaWy-->全平台曝光约 350 万</div></div>
+    </div>
+  </section>
+
+  <!--pnid:JmH2BxMChQeLBhSJhKAkkP--><!-- ================= 职业价值 ================= -->
+  <section data-page-node-id="hvGkud4aKsskWOhIfplRRz" class="block" id="value">
+    <div data-page-node-id="Z88rt7kt5CfFEZ2ElgNtDb" class="sec-head">
+      <span data-page-node-id="pZP8FIC7uwEZHmihRSCpzS" class="sec-no"><!--pnid:0I1T2241Kph99byqPckQUo-->01</span>
+      <span data-page-node-id="RsGNa5yEa7JpRsiMbbcCiE" class="en"><!--pnid:zmiENFIIxNIqlxz3ZtBMUK-->What I Deliver</span>
+      <h2 data-page-node-id="qpZWrBq3yBOSBKMmpQRYuG"><!--pnid:M9CMb4RZ3p2aUMnzfngqL8-->我能交付什么</h2>
+    </div>
+    <p data-page-node-id="LbrAiJ9Nume567gJPxMfH6" class="sec-lead"><!--pnid:xXci2iZSMZbGtw6f4RTqHQ-->四种能力，对应一个项目从判断到开业经营的四个环节。每一项背后都有可核对的数字。</p>
+
+    <div data-page-node-id="OfjTJ6kItrTBc9sEkUakM2" class="caps">
+      <div data-page-node-id="JFYueEaulJHsN2gXSRJA0N" class="cap">
+        <div data-page-node-id="3IAEcLfHvdaSIfM8xIbeaV" class="k"><!--pnid:bh8IlwAztt9iVbq7QwKhBd-->01.1 / Strategy</div>
+        <h3 data-page-node-id="sVs6qHzJkDK4xHWH7PtFsV"><!--pnid:GjPcFFu2PJTzM6ZyHEFCF1-->定位与策略</h3>
+        <p data-page-node-id="JtH9M6rNw39DZDIkREYaoo"><!--pnid:aESSc2Rt2XH1P9SGD5ExbN-->把不确定的市场，变成可执行的判断。从土地评估、客群研究到价格与渠道策略，形成一套能被团队执行的结论。</p>
+        <div data-page-node-id="nbRzxKN8HBIdVAM6bPT5Gq" class="ev"><!--pnid:vWzE2CgwEkEqmPVDCcnY5X-->累计操盘销售产值 <b data-page-node-id="wIDdrmj3Djd5TYFr4pjjJW"><!--pnid:CZYmbmgJuef2WqH2qqfJDq-->30 亿+</b><!--pnid:dOSXSipL209SVrXjouoz8n-->；通过土地评估与投资测算助力公司获取 3 宗关键土地</div>
+      </div>
+      <div data-page-node-id="OXt8e8Xxm0c1o8Mjfv4tuR" class="cap">
+        <div data-page-node-id="rUWgJyc9HaldphPMynF0Qd" class="k"><!--pnid:6ESTiorTAc6iVI5m2PqN0g-->01.2 / Brand</div>
+        <h3 data-page-node-id="Ko6d32xoiaIApHQQfjc8es"><!--pnid:JXi8smIezQragnqNt8bPJr-->品牌与内容</h3>
+        <p data-page-node-id="P8U9FGBGGAVdCR9yv4194S"><!--pnid:Efk3MOsNRnHq7YAbnYmpFt-->让项目被记住，而不只是被看见。品牌顶层设计、VI / SI / IP / 美陈落地，以及新媒体矩阵与活动传播。</p>
+        <div data-page-node-id="XARBAMvw4L5P8NwFBLfHY3" class="ev"><!--pnid:kg4g2Hu3G45fpuynL74T2f-->0 到 1 完成主题商业街区品牌全案，顶层设计通过政府汇报并获高度认可</div>
+      </div>
+      <div data-page-node-id="kldCQ1nA7ETnndIWVJJFVF" class="cap">
+        <div data-page-node-id="SPJ7C1PiAHzAQWrcWFFGqe" class="k"><!--pnid:o0tbRx0cyCy9enNytkuwW3-->01.3 / Operation</div>
+        <h3 data-page-node-id="oq6UDHLBfyojpGjG6oQoaQ"><!--pnid:EleRMJrrRUIcJcRIK0Zg0M-->招商与运营</h3>
+        <p data-page-node-id="NbWusiI9JcK4AYGksKKjkT"><!--pnid:8V34X1372oP8NizfI1iCGd-->从签约到开业，把场子真正跑起来。招商政策、业态规划、门店筹开、运营标准与经营共管。</p>
+        <div data-page-node-id="PlTFmFE6uofaJDgeqjzbZr" class="ev"><!--pnid:d3tyDVxbxu5RZJFOQBHxSv-->6 个月完成一期招商约 <b data-page-node-id="qtzNWgyX3LLpJNo9qAwQOM"><!--pnid:YjNcbdq4G8klf6ISYtOoaI-->67%</b><!--pnid:1koGDq69iuCiRYynCwTQi8--> 目标、引入商户 41 家，租金均价高于本地市场</div>
+      </div>
+      <div data-page-node-id="3GANozYwowfawXaoL96DMB" class="cap">
+        <div data-page-node-id="rH91RHrfFmiM9IsIB6glV7" class="k"><!--pnid:fizbf9s2vJVw1px5y57aYE-->01.4 / Organization</div>
+        <h3 data-page-node-id="2wo46pzhhQx2XVDlIbjORe"><!--pnid:EOzDE9SAfAIjfZ6Hmzf2HP-->组织与协同</h3>
+        <p data-page-node-id="ZoivRmWXBpkG8JBBPKnjlI"><!--pnid:GCl8NrW38cn5QzpR9KtU9h-->把个人能力变成组织能力。两次从 0 到 1 搭建部门与团队，建立流程、考核与跨部门协同机制。</p>
+        <div data-page-node-id="qUi5UMSwLjETHXyIYN4Es6" class="ev"><!--pnid:3oqcg27nW4Fbnrajn5gxN7-->先后搭建 6 人企划运营部、约 20 人营销体系；单场活动一线执行近 60 人</div>
+      </div>
+    </div>
+  </section>
+
+  <!--pnid:3cflyp4WxK3AAJeRCKSWhx--><!-- ================= 项目墙 ================= -->
+  <div data-page-node-id="hpH4a582RXnGl3DCB0JsO8" class="wall" id="projects">
+    <div data-page-node-id="IrLKvVCUIFJd3pbTz1rOkZ" class="wall-h"><span data-page-node-id="6dV4QtGPuy0FOgVE3lCArT" class="sec-no"><!--pnid:qGZAbE9yMj76Hmezz8P1Po-->02</span><!--pnid:9vrA0oIKLhApMNiwSGeo1D-->操盘与参与项目 / Projects</div>
+    <div data-page-node-id="pR7hpXzC6ycz92EXdXXaPD" class="wall-g">
+      <div data-page-node-id="ZcXst34XlNH5wVddpB2CXy" class="wall-row">
+        <div data-page-node-id="h5WrX5TRoLyw70v3iEmbZ6" class="wall-info"><!--pnid:O4wG7zG3aj0kovkbCN2fpB-->峨眉山前<span data-page-node-id="WiFLWdwEEoT5bzhBM0RpyO"><!--pnid:XDdaxkxpRy1gk989sgOqJb-->乐山 · 文旅商业<i data-page-node-id="gS1lZHnDfiJq5CCLaRTESa" class="wall-role"><!--pnid:jPps9fnXh32e6VdaSg6fy1-->企划运营部总监 · 2024.09—2026.02</i></span><p data-page-node-id="21cOVDnLuFKQaDlW4IVbUb" class="wall-desc"><!--pnid:HS8fybtj48bldgAS1BIvLN-->从 0 到 1 组建企划运营部，确立「侠风文化街区」品牌定位，任期内协助完成招商签约 7400㎡、引入商户 41 家。</p></div>
+        <img data-page-node-id="ud0kFHtDKQEexqy3afEv6K" alt="峨眉山前 实景" class="wall-thumb" decoding="async" height="207" loading="lazy" src="assets/emeishanqian.jpg" width="276">
+      </div>
+      <div data-page-node-id="Gqjr2yLArq9u7TR8CR4Zt5" class="wall-row">
+        <div data-page-node-id="BkkfUnkVmMiXCJRE5M00QA" class="wall-info"><!--pnid:YSPl2yUF479yQo0B7MsgUn-->上林景著<span data-page-node-id="cdffFEEWnpEEbyPq6bHBo5"><!--pnid:5jAC3YbFQTruXk547RAhHm-->崇州 · 高端改善<i data-page-node-id="kE0hPK3J1Wu5J8xb9NUUuR" class="wall-role"><!--pnid:v3Ket6WLgvVrh0jyCD5y3R-->项目营销总监 · 2019—2024</i></span><p data-page-node-id="npXipDCqdRDaI3lgvHauV2" class="wall-desc"><!--pnid:pgCR9qNfby09vLTfSnaCcp-->全周期营销操盘，「峡谷园林 · 智慧住宅」定位落地，项目累计销售约 8.6 亿元，居崇州市区前列。</p></div>
+        <img data-page-node-id="a17KvU1arf4xFKe5NPIqfK" alt="上林景著 实景" class="wall-thumb" decoding="async" height="207" loading="lazy" src="assets/shanglinjingzhu.jpg" width="276">
+      </div>
+      <div data-page-node-id="DUVPJAbfxVcWgakQ9lkK0g" class="wall-row">
+        <div data-page-node-id="C6FaI0CnN2HECcWr8r77dJ" class="wall-info"><!--pnid:xDEWFzMLWGomD8R1aeaRjB-->上林开府<span data-page-node-id="HNoSbwSr8J5OeIlrOPGkM4"><!--pnid:Y2ZzjSUo2KBVH1DF7o1aiI-->温江 · 住宅 + 商业<i data-page-node-id="BmLHDBnsGD0WcbMUMo4dol" class="wall-role"><!--pnid:HFwszPjlaUCr7Ut1jz7hzi-->策划部经理 · 2017—2021​​</i></span><p data-page-node-id="hDlae3wN1zyVOrvnsF5Gca" class="wall-desc"><!--pnid:HXf6Dgk6ZtsI0x9IsfDJS1-->统筹前期定位与推广体系，住宅 2019 年 9 月清盘，项目整体产值约 11.3 亿元，商业均价高于区域 40%。</p></div>
+        <img data-page-node-id="a42USPlEeIfIerbZlXvmv6" alt="上林开府 实景" class="wall-thumb" decoding="async" height="207" loading="lazy" src="assets/shanglinkaifu.jpg" width="276">
+      </div>
+      <div data-page-node-id="WT8zLoHAB9alTbjQwdhoFX" class="wall-row">
+        <div data-page-node-id="SqI4cYeEpYTrBiE1Bb9pry" class="wall-info"><!--pnid:mFRLzzuQEY6anmMrroRLVE-->花千集<span data-page-node-id="bLzqb9TPtkUgwL7oHl5VA3"><!--pnid:NsgMOTqkkd09QqdxBqAZ78-->成都 · 金牛区 / 人北中央商务区<i data-page-node-id="ukmzZY8H17b5qaCyx7TSIE" class="wall-role"><!--pnid:6rDEc1cUFxFwXAa5ALeZTM-->策划部经理 · 2017​</i></span><p data-page-node-id="q2FVk6DhizaD0n7NXS7qEo" class="wall-desc"><!--pnid:9QdLqZQsmFS7rG4OjHiiL2-->35 万㎡ 复合社区，涵盖住宅、LOFT 公寓、酒店、写字楼与 Block 街区商业。负责项目定位与业态规划调整，参与街区商业招商方案制定及商家招商。​</p></div>
+        <img data-page-node-id="ANhmKqg2jHOFCAqTzg6kYe" alt="花千集 实景" class="wall-thumb" decoding="async" height="207" loading="lazy" src="assets/huaqianji.jpg" width="276">
+      </div>
+      <div data-page-node-id="FO8nIJRl239nVSgnKur1Ps" class="wall-row">
+        <div data-page-node-id="TYe5NllEJP1LtNiF2aYPuU" class="wall-info"><!--pnid:LRM7TCnT4T4iF039qP650E-->青城郡<span data-page-node-id="7S9yRpEEST0PVoixBlMPE6"><!--pnid:vdQdkvp8tJ6jrfkn8Kymm4-->青城山 · 度假地产<i data-page-node-id="HPhpePhcTITevaZMhSZKgK" class="wall-role" style="white-space:pre-wrap"><!--pnid:2CQTHl3oiqGLLqo0Xgle0b-->策划部经理 · 2015—2017​</i></span><p data-page-node-id="qUPGEU3qexkItWkso2FBVH" class="wall-desc"><!--pnid:UKT9kCCXkxD6UrWQNKZ5Xf-->西南首批与「途家」合作的度假地产项目，制定旅游体验营销与全民营销策略，2016 年销售 1.6 亿元，成为板块旅游地产销冠。</p></div>
+        <img data-page-node-id="aTk4DJbmqtn3BO1GyM35Og" alt="青城郡 实景" class="wall-thumb" decoding="async" height="207" loading="lazy" src="assets/qingchengjun.jpg" width="276">
+      </div>
+      <div data-page-node-id="VAJcmneBHReo7Ac5nY7PPI" class="wall-row">
+        <div data-page-node-id="BpSqke6xfODNPRNCnDamjd" class="wall-info"><!--pnid:RvGG6Crev9nEHVEQbb1Hsm-->古城东方<span data-page-node-id="Q0bLnEeWjM384ncC8Exa9p"><!--pnid:dqUkedIcVYTnSTj9pJSoPj-->丽江 · 文旅商业<i data-page-node-id="dIokAOkba4arKF6BI4iicK" class="wall-role"><!--pnid:YkeYA6XsdvG3uGM6BEIRAk-->策划部经理 · 2013—2015</i></span><p data-page-node-id="pFGMRDsPIPFLAWeuGfg8ZI" class="wall-desc"><!--pnid:GHvUyPpJXKPDKPZcutxrvX-->42 万㎡ 文旅商业项目。产品定位阶段提出「前铺后院」调整建议，增加小面积低总价经营院落，一期商业院落开盘当天去化约 80%、销售约 1 亿元。参与引入 ALILA 高端度假酒店、香港新富集团奥特莱斯、王潮歌《又见丽江》演绎中心等主力商家。</p></div>
+        <img data-page-node-id="MEvhkzHsxFCMfHZzwOTcKf" alt="古城东方 实景" class="wall-thumb" decoding="async" height="207" loading="lazy" src="assets/guchengdongfang.jpg" width="276">
+      </div>
+      <div data-page-node-id="J7aGG9R78EK9lZqJBAoBKy" class="wall-row wall-row--trio">
+        <div data-page-node-id="IehMWblZ2MMdlijF2704eU" class="wall-seg"><div data-page-node-id="dLHqgssaBlPfc7Nv2KaiuH" class="wall-info"><!--pnid:7UGjNMtsqUy7kScXfC1M8X-->隆鑫九熙<span data-page-node-id="DD2CJ159dzSo1Spqh7OskZ"><!--pnid:tOOlUbcA67lu5ln6sxn6vg-->成都 · 城市综合体<i data-page-node-id="YoAZQwYRrfL41TZEh9iydw" class="wall-role"><!--pnid:mdFEQ7o00wtQlTH9IDroYe-->策划部经理 · 2008—2013</i></span><p data-page-node-id="iHozOBNJydo6T1y2aiXGUC" class="wall-desc"><!--pnid:O1ZWmviBTWHvFa03nxlvyv-->92 亩城市综合体。以「重行销」模式实现单月公寓销售破亿元，当月成都公寓销冠；介入后公寓销售约 4 亿元。</p></div></div>
+        <div data-page-node-id="cyD8H6nn5O9KT9VfXmoCfL" class="wall-seg"><div data-page-node-id="jdKKLEruDSvLX8accEdwS4" class="wall-info"><!--pnid:lOAo7suQdWG9TU4JSqIzKV-->碧玺国际<span data-page-node-id="IBTu2mqFy1wpaejXGHP7vB"><!--pnid:JxfgmdTqU3L6INdv1c8Uad-->成都 · 早期项目<i data-page-node-id="78VdvBHE7xORCz1F5wQD9C" class="wall-role"><!--pnid:WK26W604QW5WmG4rZU1Vy1-->策划部经理 · 2008—2013</i></span><p data-page-node-id="WbbtXx2CB3Dh4umF0iHgHx" class="wall-desc"><!--pnid:Rh7SodVNcJutdLRJ5HXmGf-->由成都工投集团投资公司打造，位于成都金牛宾馆附近，是集总部办公与地标级甲级写字楼于一体的金牛高科技产业园重点项目。</p></div></div>
+        <div data-page-node-id="ODklaIhDvzVPy7B4upnDQz" class="wall-seg"><div data-page-node-id="n7FYOb35Ur7eaSIoeB9gHe" class="wall-info"><!--pnid:WyQbpcjo4reLMCG0AewvQb-->早期项目<span data-page-node-id="FST6UB9sAzQsGEmzC0ZlHO"><!--pnid:YxRNWe7IJRhdmNCRoTNW4W-->成都 · 2007—2013<i data-page-node-id="l26Sbzk6B0z58jrCWeSISR" class="wall-role"><!--pnid:FpJKbLAF8XlJm67wHB4FQn-->策划部经理 · 2007—2013</i></span><p data-page-node-id="gulK1jpbghFpZgeMIdvMn7" class="wall-desc"><!--pnid:2gjVyd5UCb4wS3riM67MyK-->新熙门、鼎恒中心等项目的前期定位方案与全程营销策略；早期在广告公司服务万科、保利等房企的推广策略与创意执行。</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!--pnid:N0Q8yMnaHz8hTTpvDGbU5M--><!-- ================= 精选项目 ================= -->
+  <section data-page-node-id="rVIrhW1cEdAHsQfMmsMR0H" class="block" id="work">
+    <div data-page-node-id="t5rMkOVx2sxpUy43M5jYAh" class="sec-head">
+      <span data-page-node-id="UwvRN3gVgDD9E7TDcOZ8pz" class="sec-no"><!--pnid:Y3t0qIyeYmFWzYbt21zePH-->03</span>
+      <span data-page-node-id="ZcxtkSeHlJ5bpWHTeqYF3W" class="en"><!--pnid:xXnJ8D6uavseN0Kx6Li9y8-->Selected Work</span>
+      <h2 data-page-node-id="ldBYckDuqfGI0qGrYmpq4m"><!--pnid:0oEtOTI9NEnvT7TcsVfP4u-->精选项目</h2>
+    </div>
+    <p data-page-node-id="lth6ttiBzPXwvewKnuLPIg" class="sec-lead"><!--pnid:4YXr2awnnrefoF0m28p8NH-->三个案例，分别对应商业运营、全周期营销与品牌转化。每个案例只讲四件事：项目背景、我的判断、我做了什么、结果是什么。</p>
+
+    <article data-page-node-id="jPmyVCsDu8IxFW2gI40uVG" class="proj">
+      <div data-page-node-id="ltEbuMWIgUWxrIwQSAxebm" class="proj-meta">
+        <span data-page-node-id="Jb8C2B21vg30cIpS3XklVu" class="proj-idx"><!--pnid:SVG0hu2axdrsvyb68HgnFM-->03.1</span>
+        <h3 data-page-node-id="10Y77qN7YHAV2HBK8puF2m"><!--pnid:UyaFfmMPrSy4mpdjHrvUE4-->峨眉山前</h3>
+        <span data-page-node-id="jODgJhLj7v6v8KKSaKaVBH" class="when"><!--pnid:ofcIWgvwuvzeHCEVwYUyRO-->2024.09 — 2026.02 · 乐山峨眉山</span>
+      </div>
+      <p data-page-node-id="WMyWAMRdOulNHPxE43mfRb" class="proj-sub"><!--pnid:dufGezQwdzMr8V0CxHBKx5-->侠文化主题商业街区 · 企划运营部总监 · 团队 6 人 · 直接汇报执行董事</p>
+      <div data-page-node-id="4qu9QlJ58nmFg6we9X41TG" class="disciplines">
+        <span data-page-node-id="6LY6YH8YcaRtrzhdR08ecU"><!--pnid:pHXTBVStPg2G53C0HgiwFq-->品牌顶层设计</span><span data-page-node-id="eItumGfEjCJoHKfTNztWUm"><!--pnid:dlVHWimyApuuhlt35gU9NW-->VI / SI / IP 落地</span><span data-page-node-id="GVqv4aGgGjA4sX2VZh5hmp"><!--pnid:cHy9SAGQWMXUIHXtxw2UD2-->招商协同</span><span data-page-node-id="KM0sP7ac1FjllxOiSBEyx1"><!--pnid:AoE1yNAauw3VCN2fVyeBFz-->门店孵化</span><span data-page-node-id="jZEt0ZOD9D4nwzeZW6f2SQ"><!--pnid:0dOyP4882DFB8BDRWHeGmw-->活动营销</span><span data-page-node-id="6cE5BjpOkDJrrhRx6cc5GP"><!--pnid:yh0TDf5795a7tfZlNNr567-->政企协同</span>
+      </div>
+
+      <div data-page-node-id="KoNKNiBE6O2TfyFIJajRGL" class="proj-hero"><img data-page-node-id="AdAvJbn1caKN3dDrvElPLC" alt="峨眉山前" decoding="async" height="476" loading="lazy" src="images/3C60w39whKfjdycwoptia2.jpg" width="714"></div>
+      <div data-page-node-id="ROCuIHt7gzp4Rvi6qVVOqD" class="proj-body">
+        <div data-page-node-id="RxBexKrMgr3VLPDkpwMK53" class="proj-col">
+          <h4 data-page-node-id="tsh76yGJtqILWY9HYmACrH"><!--pnid:QaeT1FosdjizT5eOwRsmKz-->Background / 背景</h4>
+          <p data-page-node-id="x0C13JUTPXCOsIWh9G3j5Z"><!--pnid:bWpc9fhx6R1I7LPigSaaLm-->项目位于峨眉山市「天下名山」牌坊旁，总投资约 12 亿元，占地约 80 亩，建筑面积约 6.2 万㎡，定位为融合历史文化、旅游、餐饮与体验消费的特色商业街区。</p>
+          <p data-page-node-id="of0ia6IBNg5L2F19nGx6zd"><!--pnid:i7uVWTijPxuueEYsrV39vn-->任企划运营部总监，从 0 到 1 搭建部门，下设企划、新媒体、文案、联投店运营四大板块。</p>
+        </div>
+        <div data-page-node-id="5DhJsxHGvZqiw0MouMCXa5" class="proj-col">
+          <h4 data-page-node-id="YzqmdyECnTshN9uw9JJAKu"><!--pnid:nq9OupqMhOShv384sceeil-->Judgement / 我的判断</h4>
+          <p data-page-node-id="ZG04vtRl2mc4YxpRQbb8Rk" class="judge"><!--pnid:zwIjoGVMJHGR0n2mKwK3WD-->这个项目同时面对三方诉求：政府要一个能代表在地文化的城市叙事，商家要一个算得过来的客流模型，游客要一个非来不可的理由。三者交集很小。</p>
+          <p data-page-node-id="PjPXpeX6zRjbnhjaEyUMKM" class="judge"><!--pnid:jbeEt0DAK7ZDT9jOswKCBh-->我的判断是：不做又一条仿古商业街，把「侠文化」从一句口号，做成可体验、可传播、可复购的产品体系。</p>
+        </div>
+        <div data-page-node-id="5K2vHWWRJ2APv7qLHjtuQH" class="proj-col">
+          <h4 data-page-node-id="bwmKOkpqRPXyCn9fCEEZNe"><!--pnid:LKiTR2zQxHMFeclSjn6LUl-->Actions / 我做了什么</h4>
+          <ul data-page-node-id="nyq2F5T2Gt6BhRXy5oHs75">
+            <li data-page-node-id="67HTy6VCoSrieBttzjxcop"><b data-page-node-id="nTptECXrWzVnhVHfwpSxeR"><!--pnid:6mWBn16EeWAT3W86hvfkkW-->建组织</b><!--pnid:WgSVwwc8UxIubiYAwjpsNt-->——从 0 到 1 搭建企划运营部，完成职能定位、团队配置、流程与考核体系。</li>
+            <li data-page-node-id="OjrC8svfkWikyMXBg8nxC7"><b data-page-node-id="e5qoKDC1ldxFX0dA3GPbh2"><!--pnid:TD8vn4IdyS4x494kCTyRTs-->定顶层</b><!--pnid:5BsGHMHAx2en34OX1dq9eQ-->——牵头项目顶层设计与定位升级，统筹 VI、SI、IP 形象与公共美陈落地；搭建抖音、小红书、视频号新媒体矩阵。</li>
+            <li data-page-node-id="hYMfgNFywculsMAxAqEmHU"><b data-page-node-id="sMz4dMOGbkPTHVDPdCs1Qr"><!--pnid:HtWRu6HigBsnnBIK4aZ8Sb-->促招商</b><!--pnid:87VhZdgq8jxIORZLurluDc-->——统筹招商发布会，到场商家近 150 组、现场签约 30 组；任期内完成一期招商签约约 7,400 ㎡、引入商户 41 家。</li>
+            <li data-page-node-id="xW6nWllaKVKSC8pazDpGxG"><b data-page-node-id="r1O0CcIZyUUmSOj7pHmtsv"><!--pnid:cECPBSTToGA2YJThZloKGf-->孵门店</b><!--pnid:4CkD7heFFmQj44wUHteiS6-->——主理人店累计落地 5 家；牵头吴系茶餐厅、港式奶茶铺等 3 家联投店从 0 到 1 筹开，主导门店定位、开业筹备、运营标准搭建与经营共管。</li>
+          </ul>
+        </div>
+        <div data-page-node-id="lAxFCQ8wyvrGweCLGq2cJo" class="proj-col">
+          <h4 data-page-node-id="Wr7aShwgOUsW5nLETMO82D"><!--pnid:ScuK0LCD2ZD5Gm8zIzfQ3F-->Results / 结果</h4>
+          <ul data-page-node-id="C3Cu3yahm4t4rdjcoI0ZBE">
+            <li data-page-node-id="9vRe26UfVzfMkCamwNhEI1"><b data-page-node-id="GBROIkxZnX5rETf0Zu6PK6"><!--pnid:xpitFlumw1rrrtLdf5fJZg-->招商</b><!--pnid:sWkQ3iYYCCDj7BBe0CUtEz-->——全面启动 6 个月内完成一期招商目标约 67%，租金均价约 70 元/㎡/月，高于本地市场均价。</li>
+            <li data-page-node-id="tvoRvs3x4LDpu1nzlXEaSu"><b data-page-node-id="7iuxzWC9PWAex7UglyMm19"><!--pnid:h5QuPAWy83FXmBr6bNclDk-->活动</b><!--pnid:EMoPahA779diiUrDEikE9P-->——牵头《峨眉山前·江湖嘉年华》月度主题活动，一线执行近 60 人，活动期客流 20 余万人次、全平台曝光约 350 万、主流媒体报道 20 余篇。</li>
+            <li data-page-node-id="Lg1hbnWPtFJm0DVZWaL6zQ"><b data-page-node-id="auhxFblDORzT0qNlBV8DBV"><!--pnid:XnIbiZ62zDzz7Ge35pesMr-->品牌资源</b><!--pnid:17q8GFWvoOp0AtnBzN1qsV-->——促成原太古里吴系茶餐厅、成都黎山乐器博物馆联投合作落地；对接抖音头部 KOL 凌云，推动「峨眉派武术会馆」在地文化主力店进入合同洽谈。</li>
+            <li data-page-node-id="fspeWgKXcRAavRxHa0nVKG"><b data-page-node-id="Iz9gOQlUajCBzuEfkWcEHb"><!--pnid:e3iQm9a72onDPMO1MYnBNx-->政企协同</b><!--pnid:HataFnCeELLKPQHW1V0Ouz-->——与当地融媒体中心建立常态化沟通机制，为项目争取政府官方推广资源与协同支持。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-page-node-id="YEA9jBAW4yIuPyIlBpQio0" class="proj-strip">
+        <div data-page-node-id="68LyFkJrs4JAD8XV3UCU0L" class="shot"><img data-page-node-id="XOujdfyCaxCF2gB6KVBWnl" alt="峨眉山前鸟瞰实景" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src decoding="async" height="249" loading="lazy" src="images/3C60w39whKfjdycwoptia2.jpg" width="373"><div data-page-node-id="bqoWhRDNjzsOiJDdgRagsA" class="cap"><!--pnid:SRZ1YIXmc9v5v8AtvWAxzl-->峨眉山前鸟瞰实景​</div></div>
+        <div data-page-node-id="WZriyVMoycvytH3Ysx9Bck" class="shot"><img data-page-node-id="t9sMQNKUAes4MLiX33fVAj" alt="峨眉山前江湖嘉年华街区实景" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src decoding="async" height="249" loading="lazy" src="images/0Hqk4C5gLm2CvkTC2W6oOi.jpg" width="373"><div data-page-node-id="nFwltSD79icSs0qqrxOgA8" class="cap"><!--pnid:NHIB6TiIPEbqdloANfkNVS-->江湖嘉年华活动​</div></div>
+      </div>
+
+    </article>
+    <article data-page-node-id="jdZimMmAgobbFAAJ0c8fUB" class="proj">
+      <div data-page-node-id="oXFV54Tnqy0lmFXuAiqx49" class="proj-meta">
+        <span data-page-node-id="ufa1ZhQn68r6tKPIOmrftj" class="proj-idx"><!--pnid:FgRrnnvlpbiV5uDBaTfYjS-->03.2</span>
+        <h3 data-page-node-id="wBOsM6jcpy44GZvtYmN1dH"><!--pnid:Ku6xuUsRnsx9W7LjGQrv7G-->上林景著</h3>
+        <span data-page-node-id="oDRXO8f3MIu1IvyzTzSvPh" class="when"><!--pnid:B3ot4NpaefbdawBYTkZntI-->2019.11 — 2024.06 · 崇州</span>
+      </div>
+      <p data-page-node-id="dRWvioeGponKHYDYVOVsiP" class="proj-sub"><!--pnid:gjA0CN6qrO3brWKyuWCNIB-->住宅项目全周期营销操盘 · 项目营销总监</p>
+      <div data-page-node-id="sY9piG5wqxZz2Kpn8ZmT64" class="disciplines">
+        <span data-page-node-id="oG3an0uUxflAZEH6LajOhN"><!--pnid:GHygxbJfYO7MdhKEMEjcDe-->前期定位</span><span data-page-node-id="qsJR4lFljyNikjzklYf5Wy"><!--pnid:chejpZ8rlJR31652Wilyjd-->价格体系</span><span data-page-node-id="GkYmus4XgCEOCkD5B1fGVh"><!--pnid:kgv8LTxCuTSFyGjtsO1ksB-->渠道组合</span><span data-page-node-id="5oc8NnHwPl6Kbr9cziEGYt"><!--pnid:F05laK9FWiSW1Vseki7B9v-->品牌建立</span><span data-page-node-id="Thm3bDkckboCKzjm7bj9ww"><!--pnid:MN2fqjMmJ1DnXOSPpk6lXr-->销售管理</span><span data-page-node-id="qbTsJylxCTy9IVm36OzITT"><!--pnid:f7USxd1XuPRBp2ZJ6SDQib-->费用与节点</span>
+      </div>
+
+      <div data-page-node-id="Dz3KRN5WiFkaLBqeR5cMaf" class="proj-hero"><img data-page-node-id="9fqtwA6br4KCT5ZSH5ebO5" alt="上林景著" decoding="async" height="476" loading="lazy" src="images/6alNftvKS8baQx1WPOlJQa.jpg" width="714"></div>
+      <div data-page-node-id="g3HzvohkDYdhTaASRVMzSm" class="proj-body">
+        <div data-page-node-id="8NcViwfHnYMdR3ou6SGZXA" class="proj-col">
+          <h4 data-page-node-id="9Kc8BfhgCXCHqKJzDMmX3U"><!--pnid:aTdS3s275FA5PwwpCh0vwq-->Background / 背景</h4>
+          <p data-page-node-id="Ami7MerIW5duzBXo5HRSSX"><!--pnid:0vytwfHpAID4E7kIrlHQuy-->项目位于崇州南部新城，以高端改善住宅为定位，主打「峡谷园林＋智慧住宅」。项目面临区域配套尚未成熟、客户积累有限及高端改善市场竞争加剧等挑战，对前期定位、价格体系和持续获客能力提出较高要求。</p>
+        </div>
+        <div data-page-node-id="4JsPy6hMBS2ICOTBwTzFpk" class="proj-col">
+          <h4 data-page-node-id="XUhvflahCR0dva2GKr77aG"><!--pnid:Nur1DBmIJV8poRdqq4vRLl-->Judgement / 我的判断</h4>
+          <p data-page-node-id="y3k6xYUof0ihAcEjTzWfkz"><!--pnid:P3KfZHt4iFWGiPcyfeYdGH-->首开后发现，客户以崇州本地客群为主，传统大众媒体引流效果有限，竞品价格竞争加剧。</p>
+          <p data-page-node-id="s6Fak8cMtaMAERC6iml0Yb" class="judge"><!--pnid:kJZgHJDpxXyoA0051WXzz1-->我的判断是：项目不能单纯依靠降价去化，而应维护高端改善定位，通过渠道重组、直播与短视频推广、销售团队管理和营销资源调整，建立持续获客与转化能力。</p>
+        </div>
+        <div data-page-node-id="70lKfNthzGcOmT6BFW0I16" class="proj-col">
+          <h4 data-page-node-id="1val9sM0G53tafIGZJo0TQ"><!--pnid:5MB8qIYx3CLtlZcMZmbxS9-->Actions / 我做了什么</h4>
+          <ul data-page-node-id="UUpjZWhteTNpY5GNyRl5RO">
+            <li data-page-node-id="GWQomyUt7RFykbOJAwBMwx"><b data-page-node-id="GoY72R5dA7UACsz6FlebxS"><!--pnid:qUp7mdYBqxUbHBpUKFxR0i-->全周期营销统筹</b><!--pnid:5fyQXtQYQa0YnjEJxkezDT-->——统筹项目定位、营销策略、价格体系、推广计划及销售目标制定，推进从首开、持续去化到现房销售的全周期营销管理。</li>
+            <li data-page-node-id="dtlgeBpmMna7HmliJI2vpm"><b data-page-node-id="4wwuzV51HtAuna2QtgJo2f"><!--pnid:lTKsocPoJ3VFYeoIfQv9ol-->价格与渠道调整</b><!--pnid:3GOcu3bcpsCtB4AD96VUHo-->——面对市场下行及竞品价格竞争，避免简单跟随降价；组合自渠、外渠、全民营销等渠道，拓展本地客群与圈层客户。</li>
+            <li data-page-node-id="grdg2FNEGbZk1xZoENCDyf"><b data-page-node-id="MtJHMi4o0YlGyynSmdz91m"><!--pnid:uPwDQ6A8EtNP6e3OUZeTV2-->直播与短视频推广</b><!--pnid:sRUDZfHenOzpZlPIZrb0XP-->——结合项目产品特点及客户触达需求，引入直播推广，配合短视频内容传播，强化产品价值表达与线上获客，推动线上传播与线下销售衔接。</li>
+            <li data-page-node-id="thj5cSusksuNyj0zFYQx39"><b data-page-node-id="DSUH6RMg7WiK1LUrfRSAvm"><!--pnid:whA4MKjWsycXU3EVIhgSZF-->销售团队与目标管理</b><!--pnid:98kROQU7GHkudW3pSiSdp6-->——将年度销售目标分解至团队和个人，强化过程跟进与激励兑现；结合阶段性销售表现调整执行节奏，推动团队主动拓客。</li>
+            <li data-page-node-id="ZuWSPZYpcrucQGEjjifsk6"><b data-page-node-id="nhPJjDMaC0Cv34gbfNLz4P"><!--pnid:tDiLGnv6rU9XXdJ1yvjWuJ-->费用与节点运营</b><!--pnid:6jQRUF6Ac2Gl0ZzcgONgk5-->——市场下行阶段控制营销费用，开展行业渠道推介及乡镇外拓；通过千万级示范区亮相活动强化产品展示，并在交房前组织「游园体验活动」，衔接准现房销售与交付。</li>
+          </ul>
+        </div>
+        <div data-page-node-id="9BdBeE2HmImyBip95I2Wvf" class="proj-col">
+          <h4 data-page-node-id="Maj0pu3gFzSR1g1ptypKpI"><!--pnid:b0L8ts9VYDmc5wsUUckpsP-->Results / 结果</h4>
+          <ul data-page-node-id="Kitbpzps8nnB7wqe7vKE57">
+            <li data-page-node-id="Ba32l3Xx1y4fUBkGxyrhtv"><b data-page-node-id="cDavp8UTi7JeyNPNItGrk3"><!--pnid:8Mbybsr6HXTsMuuXMo6iwA-->首开业绩</b><!--pnid:Gb6pB4WOBUSNfjQsZ0o1yY-->——一期开盘销售额约 1.8 亿元，成为项目入市阶段的重要业绩节点，开盘当月销售业绩位居区域第一。</li>
+            <li data-page-node-id="067vaNeDaHHgSJXESu2TIJ"><b data-page-node-id="u5mj2jCkT9OrBDiLSXzT9c"><!--pnid:CA8gO38VBpFRNMo1MPTKeK-->全周期销售</b><!--pnid:fcxIPGVxRxaM62j5GGmzT4-->——项目累计销售产值约 8.6 亿元，2021 年实现销售产值约 3.53 亿元。</li>
+            <li data-page-node-id="1IjvlEDxA8SKuSWs4iUYf1"><b data-page-node-id="hvNW18n90o8vyhLzMJKP3l"><!--pnid:s68PxsGLTI3FRSFGDmdWOF-->品牌建设</b><!--pnid:pog0CwUAmWoTp6GsPt0Vr1-->——通过前期品牌定位、示范区呈现、主题活动及持续推广，快速建立项目高端改善市场认知；随着营销推广持续推进，以及价格策略与产品价值呈现的协同，进一步强化项目品牌认可度。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-page-node-id="tMqoVIPsM7Cb6gFRJMloiJ" class="proj-strip">
+        <div data-page-node-id="hvUGXPA7mxcsTRVaum9Djs" class="shot"><img data-page-node-id="M78w0j5TgIPK1ZXvdgXjoA" alt="上林景著园区夜景实景" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src decoding="async" height="249" loading="lazy" src="images/6alNftvKS8baQx1WPOlJQa.jpg" width="373"><div data-page-node-id="Q5PzPePRnEPLQZLaoV0Szg" class="cap"><!--pnid:ptSK5P0Lv90y9X6HoeYDOu-->园区夜景</div></div>
+        <div data-page-node-id="LUdDaZBadzfTRvnicQaSBy" class="shot"><img data-page-node-id="0hcBPfQBJdrJ1TbD1YZN63" alt="上林景著中央园林夜景实景" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src decoding="async" height="249" loading="lazy" src="images/YwTKbsL2CA8R214VzGTZ8s.jpg" width="373"><div data-page-node-id="Sg1uhLHOH9R3dAPhkTZMWP" class="cap"><!--pnid:T6oiKsAvDgdbdKuwgXvIgb-->中央园林夜景</div></div>
+      </div>
+
+    </article>
+    <article data-page-node-id="hXVFC3UiEbkxUJGB4epYKS" class="proj">
+      <div data-page-node-id="1HQokdxiMNkYClzctp0hqK" class="proj-meta">
+        <span data-page-node-id="K7FU19uiSWVDiB73yiDLa7" class="proj-idx"><!--pnid:zMnG0obtxOeu9Z0I3f0ECY-->03.3</span>
+        <h3 data-page-node-id="APmhXlqYNdZq2jVLhR89eJ"><!--pnid:4zdDBLlTSu1BsGRfp0VHrZ-->上林开府</h3>
+        <span data-page-node-id="xlOAUZScGKJHYbNa3kItDr" class="when"><!--pnid:IX0zHP3koGeISMZaLB9GAP-->2017.07 — 2021 · 成都温江</span>
+      </div>
+      <p data-page-node-id="xQ0HPEzHmxDEClapVB42w4" class="proj-sub"><!--pnid:3a2mlPohvmAYOrX9sNkfO6-->前期定位、品牌建设与销售转化 · 项目营销总监</p>
+      <div data-page-node-id="EqqYf9y2kYiYDGcx4TLjr5" class="disciplines">
+        <span data-page-node-id="jei6Xq8tkImpMcLbhUAE1G"><!--pnid:uNiQAAc2GYrDuHvVmcaJUV-->前期定位</span><span data-page-node-id="Zy3UevCFPoSSlyyxs1py9f"><!--pnid:zz4c4qC0INi5Tyav3QkPUG-->品牌定位</span><span data-page-node-id="f2ejWyNnrq4fFzgirIORqI"><!--pnid:xa2jDvB1gFFHEDCO60uETn-->展示体系</span><span data-page-node-id="dplGozoKX5AcwP5ipqhUN1"><!--pnid:yTepW58hdNw7ih8U09VZob-->推广传播</span><span data-page-node-id="05WDK930LHqvnNuxBu9una"><!--pnid:0Zq47NlyeRw0Y18OGBsMDS-->价格与推盘</span><span data-page-node-id="Wr968V2cxwmFGDz9K38YtN"><!--pnid:L1thzlwZGYqus20bGEupj1-->销售转化</span>
+      </div>
+
+      <div data-page-node-id="TOHDMYTdjmd9UyHZ0mqNSK" class="proj-hero"><img data-page-node-id="DqG7qwMgk8L90nX2935cR1" alt="上林开府" decoding="async" height="476" loading="lazy" src="images/PUtkeoFvJDCebewRYarpmG.jpg" width="714"></div>
+      <div data-page-node-id="BYF3Cy6WhatRAgEXisVvHK" class="proj-body">
+        <div data-page-node-id="nrl9en4QQOBydvAm3spvUh" class="proj-col">
+          <h4 data-page-node-id="1zjJi6xfFOTQzVtbuWI1EZ"><!--pnid:RMCUq8tdFmMD0AAv783iUT-->Background / 背景</h4>
+          <p data-page-node-id="6XcbzzNaQpjyhSfz6EtmL5"><!--pnid:HJaDSkOzBojc2K6yLvtIRh-->项目位于温江柳城大道，涵盖住宅及配套商业。前期调研显示，区域住宅库存去化周期较短，商业库存去化周期较长；地块条件复杂，住宅与商业需要采取不同的产品定位和价值表达策略。</p>
+        </div>
+        <div data-page-node-id="tL9vSzUj0kRA3D6IKsYj0Y" class="proj-col">
+          <h4 data-page-node-id="FpVh37KUk5OzEBXuixSgHG"><!--pnid:TpykVnqdYxyh59vi0XeRqu-->Judgement / 我的判断</h4>
+          <p data-page-node-id="5AlWCpsDDtUusa3EFLkI0k"><!--pnid:yXaAM00pAoRdOlrZhET5pe-->住宅应依托老城区位、交通及教育医疗配套，聚焦刚需改善客群；商业则应从经营可行性出发，控制产品规模与总价。</p>
+          <p data-page-node-id="76FF5xaoUjgi2oKHKQwWdW" class="judge"><!--pnid:RJCZREDA5uh4YSTqKps7sI-->我的判断是：品牌建设不能停留在形象包装，而应将区位、配套与产品优势转化为清晰的市场认知，并通过营销策略、推广触达和销售执行兑现项目价值。</p>
+        </div>
+        <div data-page-node-id="2C6oC7zAEgFiAShneTYl0P" class="proj-col">
+          <h4 data-page-node-id="e8N7qND5ELxdhMuWEyssse"><!--pnid:m73kwtyXXn3zA1qNpunls2-->Actions / 我做了什么</h4>
+          <ul data-page-node-id="h6vooJt0Aeb9OeXjN7c55B">
+            <li data-page-node-id="wNQNAOx1lmnSRCwDshorws"><b data-page-node-id="KT57EDx4auzyQRRHrOvX6p"><!--pnid:vsaCTAgqAkVcKtzA4Ol6VW-->前期定位与投资测算</b><!--pnid:btRuturoqLMpg41D7d1fo9-->——参与土地评估、投资测算及产品定位，结合区域供需、地块条件和产品特点，为住宅开发定位及商业产品方案提供分析依据。</li>
+            <li data-page-node-id="kHO9ycEo4ZfMe5RdALgdRC"><b data-page-node-id="2MiIgVTyER29svVHj4N6Pg"><!--pnid:0XRG7lu1So119VhVNFe20f-->品牌定位与形象建设</b><!--pnid:hCkS3WqTeuLiyMpVDdzimP-->——统筹项目品牌定位、售楼部、体验区及样板区的策略与视觉落地，将区位、交通、教育医疗配套及产品特点转化为客户可感知的价值表达。</li>
+            <li data-page-node-id="bbhpEiYOVbNLMMdPglj8Gl"><b data-page-node-id="Qw4Z4y28p4tc7AUkcDasHd"><!--pnid:8NOfqEXlk5gGSbb8AxiBiX-->品牌推广与市场触达</b><!--pnid:Ml2klj65nTpFSf9zMmonYO-->——围绕项目定位制定全程推广策略，结合线下渠道、线上平台及微信传播，建立线上线下联动的项目传播体系。</li>
+            <li data-page-node-id="630CmT8GH088DI8vJShWrU"><b data-page-node-id="u3H83PutfjS1lQuaHrpAEN"><!--pnid:rUBHxSm6gAe02vyVTHs5vk-->营销策略与销售协同</b><!--pnid:wi1oIZbv58Z3ms47kKLgll-->——制定价格、推盘节奏及阶段性营销方案，根据竞品供销变化调整推广与销售安排；配套商业结合经营条件开展多方案测算与定位比选，推进住宅与商业的差异化营销。</li>
+          </ul>
+        </div>
+        <div data-page-node-id="ITP2Y43MMWkBGQPWv1uDDn" class="proj-col">
+          <h4 data-page-node-id="ty03b0ainm7a7XDEId1pY1"><!--pnid:ChiHPaOyhBG2ewY1Iqr8CV-->Results / 结果</h4>
+          <ul data-page-node-id="TSo2C5bot4nIf4tichA1Sd">
+            <li data-page-node-id="ZxWTQJN7joCbLGvNPUbHG7"><b data-page-node-id="AaIbrd68U1q06Lo6DoGiiY"><!--pnid:Og1STgFvVCJ9KsYKiLKSzL-->住宅销售</b><!--pnid:O1XQUrG1xygATxjrkgPQQk-->——2018 年 11 月首开，2019 年 9 月清盘，累计销售产值约 10.8 亿元。</li>
+            <li data-page-node-id="xOyYMLoYS6JmpUpontNrCF"><b data-page-node-id="k3Ppvi9emA6xRtHbybAlYI"><!--pnid:isPnPsxhw049MEZcvrvZWN-->商业去化</b><!--pnid:8GU7q8vDigSoBLtdHAFWuV-->——配套商业首开去化约 80%，销售产值约 0.5 亿元。</li>
+            <li data-page-node-id="NU3cukrkVWzp0yw5sFere4"><b data-page-node-id="UHywQZHDUsBLEdq2QFAvuQ"><!--pnid:BoGPx3fw6vywzPrWamSoMH-->品牌与市场表现</b><!--pnid:avlF8CNpq4cI4TFmULcih1-->——通过项目定位、展示体系及持续推广，强化项目品牌形象与产品价值表达，支撑销售转化；项目整体销售产值约 11.3 亿元。</li>
+            <li data-page-node-id="NF8jYtbJnFgxxatZ2nPNVP"><b data-page-node-id="eGmTwB3A54EeCZ2uTxjMy1"><!--pnid:RMygrJXdH31xRGCcNDk0EL-->交付表现</b><!--pnid:CLfvCrFKga65GC6D1Eojet-->——2020 年 12 月集中交房，当日收房率 92.6%。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-page-node-id="1QNmv7gKSZGfhBDtn41jaL" class="proj-strip">
+        <div data-page-node-id="rzQ0EPYAJit0buAoB4h4SY" class="shot"><img data-page-node-id="Dj656QhDeTXcu7KcMcwity" alt="上林开府归家门庭夜景实景" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src decoding="async" height="249" loading="lazy" src="images/NTaljhEFlaTNZBM5vD5OnZ.jpg" width="373"><div data-page-node-id="SmEAL02dk1V6hh86ozOsNA" class="cap"><!--pnid:i5uNbZ2eNqEpKoqJ1WLxaK-->归家门庭夜景</div></div>
+        <div data-page-node-id="W3O7R8yFDkg6Tm64YaDL7l" class="shot"><img data-page-node-id="2Q7jBJK0rka7vWYgfEY6ld" alt="上林开府项目全景实景" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src decoding="async" height="249" loading="lazy" src="images/PUtkeoFvJDCebewRYarpmG.jpg" width="373"><div data-page-node-id="qkA00Qhji7clcVYrLbYtTK" class="cap"><!--pnid:zA16DB1BFdlft4SL3KUNi1-->项目全景</div></div>
+      </div>
+
+    </article>
+  </section>
+
+  <!--pnid:TjBTgGyIVhGFJnnBNFZ4E2--><!-- ================= 收束语 ================= -->
+  <div data-page-node-id="EwLgWI2XAwmi4LSrq9RAgh" class="closing">
+    <div data-page-node-id="IFmOyrGGa1uERJZ6Q872c1" class="in">
+      <p data-page-node-id="C1A0c3jXSmxgilCDkUXdvT" class="q"><!--pnid:uAGKa629lPxSZkfQc9DuMh-->把判断变成结果，<br data-page-node-id="KoDDPCNas8AxRHgz9Wh5AI"><!--pnid:KjWgk2BJqps5hObcgmNv4s-->把结果变成可复用的方法。</p>
+      <div data-page-node-id="nf5mXRhfjXjSE6cLL1cabS" class="by"><!--pnid:qt1oTrvnGXEhQ9S5uuUICn-->Luo Ao · Chengdu</div>
+    </div>
+  </div>
+
+  <div class="reach" id="contact">
+    <p class="reach-note">项目合作 / 品牌咨询，欢迎通过以下方式联系。</p>
+    <div class="reach-in">
+      <div class="reach-cell">
+        <div class="reach-l">Email / 邮箱</div>
+        <a class="reach-v" href="mailto:93326462@qq.com">93326462@qq.com</a>
+      </div>
+      <div class="reach-cell">
+        <div class="reach-l">WeChat / 微信</div>
+        <span class="reach-v wx" title="点击全选后复制">ershiliu026</span>
+        <span class="reach-hint">点击全选</span>
+      </div>
+    </div>
+  </div>
+
+  <footer data-page-node-id="h7FRBbZKcRZnIfksLP0gKo" class="foot">
+    <div data-page-node-id="DrmPF5jfYcWL3x8KrfCHXR" class="fg">
+      <span data-page-node-id="PMHIABU46d9GnEkj1tDzbm"><b data-page-node-id="Gbcjw2LgYAZZVYb1UvyxOo"><!--pnid:poLXwylFHsfrUSvRhNKlch-->罗骜</b><!--pnid:jqtHyJUA37FUxN47B9HsjI--> · 成都 · 商业运营 / 品牌管理</span>
+      <span data-page-node-id="eYmdjYOk6bMz7tcfnTCqDo"><!--pnid:roc2ZIoan71u2L9ScS4E7e-->© 2026 Luo Ao · Personal Portfolio</span>
+    </div>
+  </footer>
+
+</div>
+
+<script data-page-node-id="RM4jew4WWny6PeTicCgNxD" data-pnid-children="kk8IwzI2EuZu0bOjvpbUp0">
+/* 导航：页面常驻磨砂白，滚动后浮出一条发丝线 */
+(function(){
+  var nav=document.querySelector('.nav');
+  if(!nav) return;
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>8)}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+
+
+
+<script>
+/* V4.05 · 滚动进入：默认可见，只有 html.js 之下才隐藏 */
+window.addEventListener('error',function(){document.documentElement.className+=' rv-all';});
+(function(){
+  var de=document.documentElement;
+  function bail(){de.className+=' rv-all';}
+  try{
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if(reduce||!('IntersectionObserver' in window)){bail();return;}
+
+    var GROUPS=[
+      ['.stats .stat',90],
+      ['.sec-head',0],
+      ['.sec-lead',80],
+      ['.caps .cap',70],
+      ['.wall-g .wall-row',55],
+      ['.proj-meta',0],
+      ['.proj-sub',80],
+      ['.proj-strip .shot',90],
+      ['.proj-body .proj-col',70],
+      ['.fg > *',80]
+    ];
+    var vh=window.innerHeight||de.clientHeight;
+    var line=vh*0.92;          /* 已在视口 92% 以上的元素不加 .rv，避免首屏闪一下 */
+    var list=[];
+    for(var g=0;g<GROUPS.length;g++){
+      var sel=GROUPS[g][0], step=GROUPS[g][1];
+      var els=document.querySelectorAll(sel);
+      for(var n=0;n<els.length;n++){
+        var el=els[n];
+        if(el.classList.contains('rv')) continue;
+        if(el.getBoundingClientRect().top<=line) continue;
+        el.className+=' rv';
+        el.style.transitionDelay=(Math.min(n,5)*step)+'ms';
+        list.push(el);
+      }
+    }
+
+    var OPT={rootMargin:'0px 0px -12% 0px',threshold:0.12};
+    var io=new IntersectionObserver(function(es){
+      for(var k=0;k<es.length;k++){
+        if(!es[k].isIntersecting) continue;
+        es[k].target.className+=' rv-in';
+        io.unobserve(es[k].target);
+      }
+    },OPT);
+    for(var m=0;m<list.length;m++) io.observe(list[m]);
+
+    /* 第三个观察器：区块顶部发丝线生长 */
+    var io2=new IntersectionObserver(function(es){
+      for(var k=0;k<es.length;k++){
+        if(!es[k].isIntersecting) continue;
+        es[k].target.className+=' in';
+        io2.unobserve(es[k].target);
+      }
+    },OPT);
+    var heads=document.querySelectorAll('.sec-head');
+    for(var h=0;h<heads.length;h++) io2.observe(heads[h]);
+
+    /* 数据带数字滚动：进入 50% 开始，900ms，缓动 1-(1-p)^3 */
+    function countUp(stat){
+      var nn=stat.querySelector('.n');
+      if(!nn) return;
+      var tn=null;
+      for(var i=0;i<nn.childNodes.length;i++){
+        var c=nn.childNodes[i];
+        if(c.nodeType===3&&c.nodeValue.replace(/\s/g,'')!==''){tn=c;break;}
+      }
+      if(!tn) return;
+      var raw=tn.nodeValue, target=parseFloat(raw);
+      if(isNaN(target)) return;
+      var mm=raw.replace(/\s/g,'').match(/\.(\d+)/), dec=mm?mm[1].length:0;
+      var t0=null, DUR=900;
+      function frame(t){
+        if(t0===null) t0=t;
+        var p=(t-t0)/DUR; if(p>1) p=1;
+        var e=1-Math.pow(1-p,3);
+        tn.nodeValue=(target*e).toFixed(dec);
+        if(p<1) requestAnimationFrame(frame); else tn.nodeValue=raw;
+      }
+      requestAnimationFrame(frame);
+    }
+    var io3=new IntersectionObserver(function(es){
+      for(var k=0;k<es.length;k++){
+        if(!es[k].isIntersecting) continue;
+        io3.unobserve(es[k].target);
+        countUp(es[k].target);
+      }
+    },{threshold:0.5});
+    var stats=document.querySelectorAll('.stats .stat');
+    for(var q=0;q<stats.length;q++) io3.observe(stats[q]);
+
+  }catch(err){ bail(); }
+})();
+</script>
+<script>
+/* V4.07 · 首屏退场视差：页面滚 100px，首屏只上移 84px（0.16 反向补偿） */
+(function(){
+  var heroIn=document.querySelector('.hero-in');
+  var hero=document.querySelector('.hero');
+  if(!heroIn||!hero) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(window.innerWidth<768) return;              /* 窄屏直接不绑监听 */
+
+  var ticking=false, idle=null;
+  function frame(){
+    ticking=false;
+    var y=window.scrollY, h=hero.offsetHeight;
+    if(y>h*1.2) return;
+    heroIn.style.transform='translate3d(0,'+(y*0.16)+'px,0)';
+    heroIn.style.opacity=Math.max(0,1-y/(h*0.85)).toFixed(3);
+  }
+  window.addEventListener('scroll',function(){
+    heroIn.style.willChange='transform,opacity';   /* 只在滚动期间占合成层 */
+    clearTimeout(idle);
+    idle=setTimeout(function(){ heroIn.style.willChange='auto'; },200);
+    if(ticking) return;
+    ticking=true;
+    requestAnimationFrame(frame);
+  },{passive:true});
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
+<script>
+/* V4.07 · 滚动阻尼（Lenis 1.2.3）。加载失败 / ?smooth=0 / 减少动效 → 一律不初始化 */
+(function(){
+  if(!window.Lenis) return;
+  if(/[?&]smooth=0/.test(location.search)) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try{
+    var lenis=new Lenis({
+      autoRaf:true,
+      lerp:0.09,
+      wheelMultiplier:1.0,
+      touchMultiplier:1.6
+    });
+    [].forEach.call(document.querySelectorAll('a[href^="#"]'),function(a){
+      a.addEventListener('click',function(e){
+        var id=a.getAttribute('href');
+        if(id.length<2) return;
+        var t=document.querySelector(id);
+        if(!t) return;
+        e.preventDefault();
+        lenis.scrollTo(t,{offset:-72,duration:1.1});
+      });
+    });
+  }catch(err){ /* 静默降级到原生滚动 */ }
+})();
+</script>
+</body></html>
